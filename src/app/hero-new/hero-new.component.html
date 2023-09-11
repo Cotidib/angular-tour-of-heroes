@@ -1,0 +1,11 @@
+<h2>New Hero</h2>
+<form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name"
+           required
+           [(ngModel)]="model.name" name="name"
+           #name="ngModel">
+  </div>
+  <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
+</form>
